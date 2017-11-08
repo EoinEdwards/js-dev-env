@@ -2,4 +2,6 @@
 
 ## start application
 npm run share  
-[URL](http://eoin.localtunnel.me)  
+[Site URL](http://eoin.localtunnel.me)  
+
+[Course Git URL](https://github.com/coryhouse/javascript-development-environment/)
