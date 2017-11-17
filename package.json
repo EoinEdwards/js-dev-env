@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "JavaScript development environment",
   "scripts": {
+    "build": "babel-node buildScripts/build.js",
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "deploy": "surge ./dist",
     "dev:watch": "npm-run-all security-check lint:watch test:watch",
     "generate-mock-data": "babel-node buildScripts/generateMockData.js",
     "share": "npm-run-all --parallel open:src localtunnel",
@@ -13,6 +16,8 @@
     "localtunnel": "lt --port 3000 --subdomain eoin",
     "mongodb:setup": "mongod --dbpath data --fork --logpath /dev/log",
     "open:src": "babel-node buildScripts/srcServer.js",
+    "postbuild": "babel-node buildScripts/distServer.js",
+    "prebuild": "npm-run-all clean-dist test lint",
     "prestart": "babel-node buildScripts/startMessage.js",
     "prestart-mock-api": "npm run generate-mock-data",
     "security-check": "nsp check",
