@@ -37,7 +37,8 @@ export default {
       minify:{
         removeComments:true,
         collapseWhitespace:true
-      }
+      },
+      trackJSToken:'TokenValue'
     }),
 
     // Minify JS

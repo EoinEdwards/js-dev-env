@@ -62,3 +62,6 @@ dist
 
 #mock db
 db.json
+
+#Keys
+TrackJsTokenValue.txt
